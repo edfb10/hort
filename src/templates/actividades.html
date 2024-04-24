@@ -1,0 +1,277 @@
+{% extends "./layout.html" %}
+
+{% block titulo %}
+Actividades
+{% endblock %}
+
+{% block estilos %}
+<style>
+    .imagenes {
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .imagen {
+        max-height: 500px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .letrag {
+        color: forestgreen;
+
+
+    }
+
+    .img-container img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+
+    }
+
+    .contenedor-juego {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+
+    .pieza {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-size: 300px 300px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+    }
+
+    #boton-reinicio {
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block contenido %}
+<!-- Carrusel de bienbenida y reseña -->
+<section class="carousel-container ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="imagenes carousel-inner">
+            <div class="imagen carousel-item active">
+                <img src="{{ url_for('static', filename='imagenes/aprendizaje.png') }}" class="d-block w-100 img-fluid"
+                    alt="...">
+            </div>
+            <div class="imagen carousel-item shadow-sm">
+                <img src="{{ url_for('static', filename='imagenes/res.png') }}" class="d-block w-100 img-fluid"
+                    alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<!-- seccion de el mensaje de bienvenidos -->
+<section class="container-fluid  ">
+    <div class="row py-lg-5 container-fluid">
+        <div class="col-lg-6 col-md-8 mx-auto text-center ">
+            <h1 class=" letrag fw-bold text-center py-5">Bienvenidos</h1>
+            <!-- La imagen se agrega aquí con la función de un botón -->
+            <a href="#ruta de direccion">
+                <img src="{{ url_for('static', filename='imagenes/ingreso.png') }}" alt="Botón de Bienvenidos"
+                    class=" registro img-fluid " style="width: 200px; height: auto;">
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-8 mx-auto py-3">
+            <p class="lead text-body-emphasis">
+                ¡Bienvenidos al Aula Virtual!
+                Nos complace darles la más cordial bienvenida a nuestro entorno educativo de horticultura en línea,
+                diseñado especialmente para brindarles una experiencia de aprendizaje dinámica e interactiva. En este
+                espacio, encontrarán una variedad de actividades propuestas por nuestros los docentes, diseñadas con el
+                objetivo de estimular su curiosidad, fomentar su participación activa y facilitar su desarrollo
+                académico y personal para acompañar a los adultos del hogar anciano desamparado ubicado en Girardot,
+                Cundinamarca.
+                Les invitamos a explorar todas las posibilidades que ofrece este espacio virtual y a participar
+                activamente en las actividades propuestas por sus profesores. ¡Estamos emocionados de acompañarles en su
+                viaje de aprendizaje y crecimiento!
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Seccion de actividades  -->
+
+<section class="py-3 text-center container  ">
+    <div class="row ">
+        <div class="col-form-label-lg">
+            <h1 class=" letrag modal-title fw-semibold py-3">ACTIVIDADES</h1>
+            <p class="lead text-body-emphasis text-start">
+
+                "Las sesiones terapéuticas están diseñadas para brindar a los adultos mayores una experiencia
+                enriquecedora y estimulante a través del uso de flores. Durante estas sesiones, se realizan actividades
+                que permiten a los participantes interactuar con las flores de diversas formas, promoviendo así el
+                desarrollo de su motricidad fina. Estas actividades están diseñadas para ofrecer una experiencia
+                sensorial gratificante, donde los adultos mayores pueden explorar y disfrutar de la belleza y fragancia
+                de las flores mientras realizan acciones que requieren precisión y destreza manual. A través de estas
+                actividades, se busca no solo estimular la motricidad fina, sino también brindar un espacio para la
+                expresión creativa y el bienestar emocional de los participantes."
+            </p>
+
+        </div>
+    </div>
+</section>
+<!-- seccion de imagnes de vestidos  -->
+<section id="activiti">
+
+
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-container">
+                    <img src="{{ url_for('static', filename='imagenes/vestido.png') }}" class="img-fluid" alt="Imagen 1">
+                </div>
+                <a href="https://drive.usercontent.google.com/u/0/uc?id=1ux5qpcw41o1xlBopI1lN8HS71dk1LNbI&export=download"
+                    class="btn btn-primary mt-2">Descargar PDF</a>
+
+            </div>
+            <div class="col-md-6">
+                <div class="img-container">
+                    <img src="{{ url_for('static', filename='imagenes/vestidoh.png') }}" class="img-fluid"
+                        alt="Imagen 2">
+                </div>
+                <a href="https://drive.usercontent.google.com/u/0/uc?id=1ux5qpcw41o1xlBopI1lN8HS71dk1LNbI&export=download"
+                    class="btn btn-primary mt-2">Descargar PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  seccion de rompecabezas  -->
+<section class="bg-dark py-3">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-center py-4">
+                <img src="{{ url_for('static', filename='imagenes/jardin.jpg') }}" class="img-fluid" alt="Imagen de referencia">
+            </div>
+            <div class="col-md-6">
+                <div id="contenedor-juego" class="contenedor-juego"></div>
+                <button id="boton-reinicio" class="btn btn-success btn-outline-warning  w-100" onclick="iniciarRompecabezas()">Reiniciar
+                    Rompecabezas</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+{% block js %}
+
+<script>
+    function descargarPDF(rutaPDF) {
+        // Lógica para descargar el PDF
+        window.location.href = rutaPDF;
+    }
+
+    // Variables globales
+    let piezas = [];
+    let dimensiones = 3; // 3x3 piezas
+    let tamanoPieza = 100; // Tamaño de cada pieza en píxeles
+    let imagenUrl = "{{ url_for('static', filename='imagenes/jardin.jpg') }}"; // Ruta de la imagen
+
+    // Función para mezclar las piezas
+    function mezclarArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Inicialización del rompecabezas
+    function iniciarRompecabezas() {
+        let contenedorJuego = document.getElementById('contenedor-juego');
+        contenedorJuego.innerHTML = ''; // Limpiar el contenedor antes de reiniciar
+        piezas = []; // Reiniciar el array de piezas
+        let posiciones = [...Array(dimensiones * dimensiones).keys()];
+        mezclarArray(posiciones);
+
+        for (let i = 0; i < dimensiones * dimensiones; i++) {
+            let pieza = document.createElement('div');
+            pieza.classList.add('pieza');
+            pieza.style.backgroundImage = 'url(' + imagenUrl + ')';
+            let posicion = posiciones[i];
+            pieza.style.backgroundPosition = `-${(posicion % dimensiones) * tamanoPieza}px -${Math.floor(posicion / dimensiones) * tamanoPieza}px`;
+            pieza.style.left = `${(i % dimensiones) * tamanoPieza}px`;
+            pieza.style.top = `${Math.floor(i / dimensiones) * tamanoPieza}px`;
+            pieza.setAttribute('data-posicion', posicion);
+            pieza.setAttribute('draggable', true);
+            pieza.ondragstart = arrastrarPieza;
+            pieza.ondragover = permitirSoltar;
+            pieza.ondrop = soltarPieza;
+            contenedorJuego.appendChild(pieza);
+            piezas.push(pieza);
+        }
+    }
+
+    // Funciones de arrastrar y soltar
+    function arrastrarPieza(event) {
+        event.dataTransfer.setData('text/plain', event.target.dataset.posicion);
+    }
+
+    function permitirSoltar(event) {
+        event.preventDefault();
+    }
+
+    function soltarPieza(event) {
+        event.preventDefault();
+        let origen = event.dataTransfer.getData('text/plain');
+        let destino = event.target.dataset.posicion;
+        let piezaOrigen = piezas.find(pieza => pieza.dataset.posicion === origen);
+        let piezaDestino = event.target;
+
+        // Intercambia las posiciones de fondo si las piezas son diferentes
+        if (piezaOrigen !== piezaDestino) {
+            let bgPosOrigen = piezaOrigen.style.backgroundPosition;
+            piezaOrigen.style.backgroundPosition = piezaDestino.style.backgroundPosition;
+            piezaDestino.style.backgroundPosition = bgPosOrigen;
+
+            // Intercambia los atributos de data-posicion
+            piezaOrigen.dataset.posicion = destino;
+            piezaDestino.dataset.posicion = origen;
+        }
+
+        // Verifica si el rompecabezas está completo
+        verificarSiCompleto();
+    }
+
+    function verificarSiCompleto() {
+        let esCompleto = piezas.every((pieza, index) => {
+            return parseInt(pieza.dataset.posicion) === index;
+        });
+
+        if (esCompleto) {
+            setTimeout(function () {
+                alert('¡Felicidades! Has completado el rompecabezas correctamente.');
+            }, 100);
+        }
+    }
+
+    // Iniciar el juego
+    iniciarRompecabezas();
+
+
+</script>
+{% endblock %}

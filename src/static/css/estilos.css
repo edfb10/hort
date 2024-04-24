@@ -1,0 +1,71 @@
+
+@import "carousel";
+/* Elimina las flechas de los elementos del menú desplegable en Bootstrap */
+.navbar-nav .dropdown-toggle::after {
+    display: none;
+    
+  }
+
+
+  
+/* Asegúrate de que los submenús estén ocultos inicialmente */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+ 
+  
+  /* Muestra el submenú cuando el usuario coloca el cursor sobre el elemento del menú principal */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+/* Tamaño de la letra de la barrra de navegacion  */
+a.nav-link.dropdown-toggle {
+    font-size: 15px;
+}
+a.nav-link.active{
+    font-size: 15px;
+}
+
+
+
+/* Transición suave para todos los elementos de la navbar */
+.navbar a,
+.navbar button {
+  transition: color 0.3s ease;
+}
+
+/* Cambiar el color de fondo de los dropdown items al pasar el cursor */
+.dropdown-item:hover {
+  background-color: #198754; /* Elige el color que prefieras */
+  color: #f8f9fa;
+}
+.nav-link.active:hover{
+  color:#198754;
+}
+
+/* Cambiar el color del texto de los enlaces al pasar el cursor */
+.nav-link:hover,
+.navbar-brand:hover {
+  color:#198754; /* Elige el color que prefieras */
+
+}
+.navbar-expand-lg .bg-body-tertiary{
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
